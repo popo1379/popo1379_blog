@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+</head>
+
+<body>
+---<br>
+　　layout: default<br>
+　　title: 我的Blog<br>
+　　---<br>
+　　&lt;h2&gt;{{ page.title }}&lt;/h2&gt;<br>
+　　&lt;p&gt;最新文章&lt;/p&gt;<br>
+　　&lt;ul&gt;<br>
+　　　　{% for post in site.posts %}<br>
+　　　　　　&lt;li&gt;{{ post.date | date_to_string }} &lt;a href=&quot;{{ site.baseurl 
+}}{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;<br>
+　　　　{% endfor %}<br>
+　　&lt;/ul&gt;<br>
+</body>
+</html>
